@@ -176,6 +176,10 @@ See [`examples/`](examples/) for runnable, standalone demos:
 | 08 | `08_styling.py`         | `[tag]` markup, `style()`, and color helpers |
 | 09 | `09_async_inquirer.py`  | `await` confirm/select/checkbox alongside other coroutines |
 | 10 | `10_markdown_stream.py` | Markdown to styled terminal: `render_markdown()` + streaming `feed()` |
+---
+https://github.com/user-attachments/assets/5bd2fac8-745d-4cc9-94b4-c50897199241
+
+
 
 Run any of them from a checkout — they add the repo root to `sys.path`:
 
