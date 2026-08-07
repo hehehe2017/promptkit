@@ -31,7 +31,7 @@ tags = checkbox("Features?", choices=["metrics", "tracing", "cache"]).run()
 ## Installation
 
 ```bash
-pip install promptkit
+pip install -e .
 ```
 
 Requires Python 3.9+. Runtime dependencies:
