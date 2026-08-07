@@ -18,7 +18,7 @@ tags = checkbox("Features?", choices=["metrics", "tracing", "cache"]).run()
 ## Features
 
 - **Line editor** with cursor movement, kill/yank, word ops, and multi-line paste
-- **Completion** — prefix / substring / fuzzy matching, two-column menu with descriptions
+- **Completion** — prefix / fuzzy matching, two-column menu with descriptions
 - **History** — in-memory or file-backed, ↑/↓ recall, Fish-style ghost autosuggest
 - **Syntax highlighting** for the current line (Pygments)
 - **Rich-style markup** — `[bold cyan]hello[/]` parsed to ANSI, plus color helpers
@@ -60,7 +60,7 @@ from promptkit import prompt
 cmd = prompt(
     "cmd> ",
     completions=["git", "wget", "curl", "kubectl"],
-    match_mode="fuzzy",       # "prefix" | "substring" | "fuzzy"
+    match_mode="fuzzy",       # "prefix" | "fuzzy"
     history_file="~/.myapp_history",
     prompt_style="bold cyan",
     autosuggest=True,
