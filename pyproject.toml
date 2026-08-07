@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "promptkit"
+version = "0.1.0"
+description = "Modular terminal input with completion, history, syntax highlighting, and inquirer-style prompts."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "hehehe" },
+]
+keywords = [
+    "prompt",
+    "terminal",
+    "cli",
+    "tui",
+    "inquirer",
+    "completion",
+    "readline",
+    "repl",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "wcwidth>=0.2.5",
+    "pygments>=2.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/hehehe2017/promptkit"
+Repository = "https://github.com/hehehe2017/promptkit"
+Issues = "https://github.com/hehehe2017/promptkit/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["promptkit"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "promptkit",
+    "examples",
+    "README.md",
+    "pyproject.toml",
+]
