@@ -61,7 +61,7 @@ cmd = prompt(
     "cmd> ",
     completions=["git", "wget", "curl", "kubectl"],
     match_mode="fuzzy",       # "prefix" | "fuzzy"
-    history_file="~/.myapp_history",
+    history="~/.myapp_history",
     prompt_style="bold cyan",
     autosuggest=True,
 )
@@ -114,7 +114,7 @@ while True:
 ```python
 from promptkit import confirm, select, checkbox
 
-ok = confirm("Continue?", default=True, border=True)
+ok = confirm("Continue?", default=True, border=True).run()
 
 env = select(
     "Deploy where?",
@@ -199,10 +199,12 @@ Top-level exports from `promptkit`:
 - **Formatting** — `FormattedPrompt`, `PromptSpec`, `resolve_prompt`
 - **Styling** — `StyleParser`, `style`, `bold`, `dim`, `italic`, `underline`,
   color helpers (`red`, `green`, `blue`, `yellow`, `magenta`, `cyan`, `white`),
-  background helpers (`on_red`, `on_green`, `on_blue`, ...)
+  background helpers (`on_red`, `on_green`, `on_blue`, `on_yellow`,
+  `on_magenta`, `on_cyan`, `on_white`, `on_black`)
 - **Highlighting** — `Highlighter`, `CompletionHighlighter`
 - **Terminal** — `TerminalCapabilities`, `get_capabilities`, `reset_capabilities`
 - **Box drawing** — `BoxChars`
+- **Markdown** — `MarkdownStream`, `render_markdown`
 
 ## Terminal support
 
