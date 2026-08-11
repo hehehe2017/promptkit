@@ -118,10 +118,7 @@ ok = confirm("Continue?", default=True, border=True).run()
 
 env = select(
     "Deploy where?",
-    choices=[
-        ("staging",    "internal QA cluster"),
-        ("production", "customer-facing"),
-    ],
+    choices=["staging","internal QA cluster","production", "customer-facing"],
     border=True,
     box_style="rounded",
 ).run()
